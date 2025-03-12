@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+<img with="100%" src="public/webog.webp">
+</div>
+<br>
+<h1 align="center"> Conversor de fuentes .ttf a woff y woff2
+</h1>
 
-## Getting Started
+Diferencias entre WOFF y WOFF2
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+| Aspecto | WOFF | WOFF2 |  
+| --- | --- |  
+| Compresión | Basado en gzip | Algoritmo Brotli (más eficiente). |  
+| Tamaño del archivo | Mayor en comparación | Más pequeño (hasta un 30% menos). |  
+| Compatibilidad | Navegadores modernos y antiguos | Solo navegadores modernos. |  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Por qué usar **WOFF/WOFF2** en la web
+Optimización para la Web: Estos formatos están diseñados para ser ligeros y rápidos de cargar, ideales para mejorar la velocidad de los sitios web.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Licencias: Permiten a los diseñadores incluir fuentes personalizadas respetando las restricciones de licencia, ya que los metadatos pueden contener esta información.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Amplio soporte: WOFF tiene soporte en navegadores
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🛠 <b>Framework</b>: Next.js (utiliza la librería React)   
+🎨<b>Estilo</b>: Tailwind CSS v4.0 y CSS puro para los botones arcade.  
+📧<b>Dependencias de Nodejs</b>: ttf2woff y wawoff2  
+💾<b>Deployed</b>: Vercel desde GitHub  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[Link a la APP](https://woff-converter.vercel.app/)
