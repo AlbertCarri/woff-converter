@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
         property="og:description"
         content="Convertion from ttf to woff and woff2"
       />
-      <meta property="og:image" content="/webog.webp" />
+      <meta property="og:image" content="https://woff-converter.vercel.app/webog.webp" />
       <meta property="og:type" content="website" />
       <body>{children}</body>
     </html>
