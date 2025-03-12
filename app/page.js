@@ -2,6 +2,7 @@
 
 import { useActionState, useState } from "react";
 import { Upload, Download, Github } from "@/utils/svg";
+import { BoxLoading } from "@/components/BoxLoading";
 
 async function sendFile(prevState, formData) {
   const file = formData.get("file");
@@ -62,39 +63,12 @@ export default function Home() {
           />
           <button
             type="submit"
-            className="bg-amber-500 text-3xl p-2 text-black rounded-2xl hover:bg-amber-700 cursor-pointer mt-4 border-2 border-gray-900 shadow-lg shadow-gray-600"
+            className="bg-amber-500 text-3xl p-2 text-black rounded-2xl hover:bg-amber-700 cursor-pointer mt-4 border-2 border-gray-900 shadow-lg shadow-gray-900"
           >
             {isPending ? "Converting...." : "Click to convert"}
           </button>
         </form>
-        {isPending && (
-          <div className="boxes mt-20 mx-auto">
-            <div className="box">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div className="box">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div className="box">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div className="box">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-        )}
+        {isPending && <BoxLoading />}
         {state.success !== null && !isPending && (
           <>
             <p className="text-2xl mt-4 text-center">
@@ -104,7 +78,7 @@ export default function Home() {
               href={state.urlWoff}
               className={`${
                 state.success ? "bg-blue-600 hover:bg-sky-600 " : "bg-red-600"
-              } flex items-center justify-center gap-4 text-cyan-50 w-80 text-center text-lg p-2 rounded-2xl mt-6 border-2 border-gray-900 shadow-lg shadow-gray-600 `}
+              } flex items-center justify-center gap-4 text-cyan-50 w-80 text-center text-lg p-2 rounded-2xl mt-6 border-2 border-gray-900 shadow-lg shadow-gray-900 `}
             >
               <Download /> {state.fileName}.woff
             </a>
@@ -112,7 +86,7 @@ export default function Home() {
               href={state.urlWoff2}
               className={`${
                 state.success ? "bg-blue-700 hover:bg-sky-700" : "bg-red-700"
-              } flex items-center justify-center gap-4 text-cyan-50 w-80 text-center text-lg p-2 rounded-2xl mt-6 border-2 border-gray-900 shadow-lg shadow-gray-600`}
+              } flex items-center justify-center gap-4 text-cyan-50 w-80 text-center text-lg p-2 rounded-2xl mt-6 border-2 border-gray-900 shadow-lg shadow-gray-900`}
             >
               <Download /> {state.fileName}.woff2
             </a>
